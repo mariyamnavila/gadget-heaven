@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
+import banner from '../../assets/banner.jpg'; 
 
 const Banner = () => {
 
@@ -10,10 +11,11 @@ const Banner = () => {
         <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
     </>
     return (
-        <div className="relative -top-24  border border-[rgba(149,56,226,0.48)] rounded-3xl mt-8">
+        <div>
+            <div className="relative -top-24  border border-[rgba(149,56,226,0.48)] rounded-3xl mt-8">
 
             <div className="bg-[#9538e2] mx-2 my-2 border rounded-3xl">
-                <div className="max-w-7xl text-center text-white mx-auto space-y-6 pb-40">
+                <div className="max-w-7xl text-center text-white mx-auto space-y-6 pb-64">
                     <div className="navbar p-0 min-h-0">
                         <div className="navbar-start">
                             <div className="dropdown">
@@ -53,6 +55,10 @@ const Banner = () => {
                     <p className="w-2/3 mx-auto ">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                     <button className="btn rounded-full py-4 px-7 bg-white text-[#9538e2] font-bold text-xl ">Shop Now</button>
                 </div>
+            </div>
+        </div>
+            <div className='relative -top-80 mx-auto max-w-5xl h-[563px] border-[16px] border-[#FFFFFF4D] outline outline-2 outline-offset-1 outline-white rounded-[32px]'>
+                <img className='w-[1000px] h-[532px] rounded-[18px] object-center' src={banner} alt="" />
             </div>
         </div>
     );
