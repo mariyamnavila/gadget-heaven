@@ -1,0 +1,257 @@
+[
+    {
+        "product_id": "L001",
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.postimg.cc/639jHnvs/laptop1.jpg",
+        "category": "Laptops",
+        "price": 999,
+        "description": "Compact ultrabook with stunning display and premium build.",
+        "Specification": [
+            "Intel i7",
+            "16GB RAM",
+            "512GB SSD",
+            "13.3-inch FHD"
+        ],
+        "availability": true,
+        "rating": 4.3,
+        "brand": "Dell"
+    },
+    {
+        "product_id": "L002",
+        "product_title": "Apple MacBook Pro M2",
+        "product_image": "https://i.postimg.cc/6qqHKKcY/laptop2.jpg",
+        "category": "Laptops",
+        "price": 1499,
+        "description": "Apple’s performance laptop powered by the M2 chip.",
+        "Specification": [
+            "Apple M2",
+            "16GB RAM",
+            "512GB SSD",
+            "14-inch Retina"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "L003",
+        "product_title": "HP Envy x360",
+        "product_image": "https://i.postimg.cc/bNKm7Kt9/laptop3.jpg",
+        "category": "Laptops",
+        "price": 1199,
+        "description": "2-in-1 convertible laptop with long battery life.",
+        "Specification": [
+            "Intel i5",
+            "16GB RAM",
+            "1TB SSD",
+            "15.6-inch Touch"
+        ],
+        "availability": true,
+        "rating": 4.1,
+        "brand": "HP"
+    },
+    {
+        "product_id": "L004",
+        "product_title": "Lenovo Legion 5 Pro",
+        "product_image": "https://i.postimg.cc/3RVL36qh/laptop4.jpg",
+        "category": "Laptops",
+        "price": 1350,
+        "description": "High-performance gaming laptop with RTX graphics.",
+        "Specification": [
+            "AMD Ryzen 7",
+            "32GB RAM",
+            "1TB SSD",
+            "16-inch QHD"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Lenovo"
+    },
+    {
+        "product_id": "L005",
+        "product_title": "Asus ZenBook Duo",
+        "product_image": "https://i.postimg.cc/d0Jjvvtr/laptop5.jpg",
+        "category": "Laptops",
+        "price": 1600,
+        "description": "Dual-screen productivity laptop with stylish design.",
+        "Specification": [
+            "Intel i7",
+            "16GB RAM",
+            "1TB SSD",
+            "14-inch + ScreenPad"
+        ],
+        "availability": true,
+        "rating": 3.9,
+        "brand": "Asus"
+    },
+    {
+        "product_id": "L006",
+        "product_title": "Microsoft Surface Laptop 5",
+        "product_image": "https://i.postimg.cc/pXy7bf1R/laptop6.jpg",
+        "category": "Laptops",
+        "price": 1250,
+        "description": "Touchscreen laptop with premium Windows experience.",
+        "Specification": [
+            "Intel i5",
+            "8GB RAM",
+            "512GB SSD",
+            "13.5-inch Touch"
+        ],
+        "availability": true,
+        "rating": 4.2,
+        "brand": "Microsoft"
+    },
+    {
+        "product_id": "S001",
+        "product_title": "iPhone 14 Pro",
+        "product_image": "https://i.postimg.cc/j2hRpz8z/smart-Phone1.jpg",
+        "category": "Smartphones",
+        "price": 1099,
+        "description": "Apple’s flagship phone with ProMotion display and advanced cameras.",
+        "Specification": [
+            "A16 Bionic",
+            "6GB RAM",
+            "128GB Storage",
+            "6.1-inch OLED"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "S002",
+        "product_title": "Samsung Galaxy S23",
+        "product_image": "https://i.postimg.cc/jqM9FgcM/smart-Phone2.jpg",
+        "category": "Smartphones",
+        "price": 950,
+        "description": "Premium Android device with Snapdragon processor.",
+        "Specification": [
+            "Snapdragon 8 Gen 2",
+            "8GB RAM",
+            "256GB Storage",
+            "6.6-inch AMOLED"
+        ],
+        "availability": true,
+        "rating": 4.4,
+        "brand": "Samsung"
+    },
+    {
+        "product_id": "S003",
+        "product_title": "Google Pixel 7",
+        "product_image": "https://i.postimg.cc/3JK8gcR9/smart-Phone3.jpg",
+        "category": "Smartphones",
+        "price": 799,
+        "description": "Pixel phone with excellent camera and AI features.",
+        "Specification": [
+            "Google Tensor G2",
+            "8GB RAM",
+            "128GB Storage",
+            "6.4-inch OLED"
+        ],
+        "availability": true,
+        "rating": 4.0,
+        "brand": "Google"
+    },
+    {
+        "product_id": "H001",
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.postimg.cc/tT5fy2jC/headphone1.jpg",
+        "category": "Headphones",
+        "price": 399,
+        "description": "Industry-leading noise cancelling wireless headphones.",
+        "Specification": [
+            "Bluetooth 5.2",
+            "ANC",
+            "30-hour battery",
+            "Touch controls"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "brand": "Sony"
+    },
+    {
+        "product_id": "H002",
+        "product_title": "Bose QuietComfort 45",
+        "product_image": "https://i.postimg.cc/x8Q0psPf/headphone2.jpg",
+        "category": "Headphones",
+        "price": 329,
+        "description": "Comfortable headphones with balanced sound and ANC.",
+        "Specification": [
+            "Bluetooth 5.1",
+            "ANC",
+            "24-hour battery",
+            "Lightweight design"
+        ],
+        "availability": true,
+        "rating": 4.2,
+        "brand": "Bose"
+    },
+    {
+        "product_id": "W001",
+        "product_title": "Apple Watch Series 8",
+        "product_image": "https://i.postimg.cc/s25qH3HW/watch1.jpg",
+        "category": "Smartwatches",
+        "price": 499,
+        "description": "Advanced smartwatch with health and fitness tracking.",
+        "Specification": [
+            "Heart rate monitor",
+            "GPS",
+            "Always-on Display",
+            "Water resistant"
+        ],
+        "availability": true,
+        "rating": 4.6,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "W002",
+        "product_title": "Samsung Galaxy Watch 5",
+        "product_image": "https://i.postimg.cc/1tPTLbbj/watch2.jpg",
+        "category": "Smartwatches",
+        "price": 350,
+        "description": "Stylish smartwatch with advanced fitness tracking.",
+        "Specification": [
+            "Sleep tracking",
+            "ECG",
+            "GPS",
+            "AMOLED display"
+        ],
+        "availability": true,
+        "rating": 3.8,
+        "brand": "Samsung"
+    },
+    {
+        "product_id": "C001",
+        "product_title": "Canon EOS R10",
+        "product_image": "https://i.postimg.cc/BvDfWTbX/camera1.jpg",
+        "category": "Cameras",
+        "price": 980,
+        "description": "Mirrorless camera with high-quality image and fast autofocus.",
+        "Specification": [
+            "24MP",
+            "4K Video",
+            "Dual Pixel AF",
+            "Vari-angle LCD"
+        ],
+        "availability": true,
+        "rating": 4.5,
+        "brand": "Canon"
+    },
+    {
+        "product_id": "C002",
+        "product_title": "Sony Alpha a6400",
+        "product_image": "https://i.postimg.cc/pLw3BmCx/camera2.jpg",
+        "category": "Cameras",
+        "price": 1150,
+        "description": "Compact mirrorless camera with excellent autofocus.",
+        "Specification": [
+            "24.2MP",
+            "4K Video",
+            "Fast AF",
+            "Touchscreen"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Sony"
+    }
+]
