@@ -5,34 +5,37 @@ import './Gadget.css'
 import NoInfo from "../NoInfo/NoInfo";
 const Gadgets = () => {
     const allGadget = useLoaderData();
-    const [gg, setGg] = useState([]);
+    const [gadgets, setGadgets] = useState([]);
     const [isActive, setIsActive] = useState(null);
     const handleClick = (e) => {
         setIsActive(e)
     }
     useEffect(() => {
-        setGg(allGadget)
+        setGadgets(allGadget)
         setIsActive('all')
     }, [])
     const filtered = e => {
         if (e === 'all') {
-            setGg(allGadget)
+            setGadgets(allGadget)
             handleClick(e)
         }
         else {
             const category = allGadget.filter(gadget => gadget.category === e)
             handleClick(e)
-            setGg(category)
+            setGadgets(category)
         }
     }
     const show = () => {
-        console.log(gg);
-        if (gg.length === 0) {
+        // console.log(gg);
+        if (gadgets.length === 0) {
             return <NoInfo></NoInfo>
-            
         }
         else {
-            return <div className="grid grid-cols-3 gap-5">{ gg.map((gadget, idx) => <Gadget key={idx} gadget={gadget}></Gadget>) }</div>
+            return <div className="grid grid-cols-3 gap-5">
+                {
+                    gadgets?.map((gadget, idx) => <Gadget key={idx} gadget={gadget}></Gadget>)
+                }
+            </div>
         }
     }
     return (
@@ -84,11 +87,9 @@ const Gadgets = () => {
                         Accessories
                     </button>
                 </div>
-                {/* <div className="grid grid-cols-3 gap-5"> */}
-                    {
-                        show()
-                    }
-                {/* </div> */}
+                {
+                    show()
+                }
             </div>
         </div>
     );
