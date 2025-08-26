@@ -15,7 +15,7 @@ const Banner = () => {
             <div className="relative -top-24  border border-[rgba(149,56,226,0.48)] rounded-3xl mt-8">
 
             <div className="bg-[#9538e2] mx-2 my-2 border rounded-3xl">
-                <div className="max-w-7xl text-center text-white mx-auto space-y-6 pb-64">
+                <div className="max-w-7xl text-center text-white mx-auto space-y-6 pb-52">
                     <div className="navbar p-0 min-h-0">
                         <div className="navbar-start">
                             <div className="dropdown">
@@ -57,8 +57,9 @@ const Banner = () => {
                 </div>
             </div>
         </div>
-            <div className='relative -top-80 mx-auto max-w-5xl h-[563px] border-[16px] border-[#FFFFFF4D] outline outline-2 outline-offset-1 outline-white rounded-[32px]'>
-                <img className='w-[1000px] h-[532px] rounded-[18px] object-center' src={banner} alt="" />
+            <div className='relative -top-64 mx-auto max-w-5xl h-[563px] border-[16px] border-[#FFFFFF4D] outline outline-2 outline-offset-1 outline-white rounded-[32px]'>
+               {/* absolute top-[430px] left-32 */}
+               <img className='w-[1000px] h-[532px] rounded-[18px] object-center' src={banner} alt="" />
             </div>
         </div>
     );
