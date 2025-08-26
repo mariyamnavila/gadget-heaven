@@ -5,12 +5,13 @@ import { MdOutlineStarPurple500 } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import { AddToCart, AddToWishlist } from "./storage";
 
 const GadgetDetails = () => {
     const { gadgetId } = useParams();
     const allGadget = useLoaderData();
     const selectedGadget = allGadget.find(gadget => gadget.product_id === gadgetId);
-    const { product_title, product_image, price, description, Specification, availability, rating } = selectedGadget;
+    const { product_id, product_title, product_image, price, description, Specification, availability, rating } = selectedGadget;
     return (
         <div >
             <Helmet>
@@ -45,7 +46,7 @@ const GadgetDetails = () => {
                     <p className="text-xl font-semibold">Rating ⭐ </p>
                     <div className="flex items-center">
                         <Rating
-                        className="mr-4"
+                            className="mr-4"
                             initialRating={rating}
                             readonly
                             emptySymbol={<MdOutlineStarBorder className="text-[#f9c004] text-3xl" />}
@@ -56,8 +57,8 @@ const GadgetDetails = () => {
                         </div>
                     </div>
                     <div className="flex">
-                        <button className="bg-[#9036da] text-[18px] font-bold text-white btn rounded-full mr-4">Add to Card <IoCartOutline className="text-2xl"/></button>
-                        <a className="btn p-3 rounded-full bg-white"><FaRegHeart className="text-xl"/></a>
+                        <button onClick={() => { AddToCart(product_id)}} className="bg-[#9036da] text-[18px] font-bold text-white btn rounded-full mr-4">Add to Card <IoCartOutline className="text-2xl" /></button>
+                        <a onClick={() => { AddToWishlist(product_id)}} className="btn p-3 rounded-full bg-white"><FaRegHeart className="text-xl" /></a>
                     </div>
                 </div>
             </div>

@@ -26,7 +26,6 @@ const Gadgets = () => {
         }
     }
     const show = () => {
-        // console.log(gg);
         if (gadgets.length === 0) {
             return <NoInfo></NoInfo>
         }

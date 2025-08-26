@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import banner from '../../assets/banner.jpg'; 
@@ -53,7 +53,8 @@ const Banner = () => {
                     </div>
                     <h1 className="text-6xl font-bold w-[90%] mx-auto pt-12 ">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                     <p className="w-2/3 mx-auto ">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
-                    <button className="btn rounded-full py-4 px-7 bg-white text-[#9538e2] font-bold text-xl ">Shop Now</button>
+                    <Link to={'/dashboard'}><button className="btn rounded-full py-4 px-7 bg-white text-[#9538e2] mt-4 font-bold text-xl ">Shop Now</button></Link>
+                    
                 </div>
             </div>
         </div>
