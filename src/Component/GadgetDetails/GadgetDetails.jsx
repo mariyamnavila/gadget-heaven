@@ -11,7 +11,17 @@ const GadgetDetails = () => {
     const { gadgetId } = useParams();
     const allGadget = useLoaderData();
     const selectedGadget = allGadget.find(gadget => gadget.product_id === gadgetId);
-    const { product_id, product_title, product_image, price, description, Specification, availability, rating } = selectedGadget;
+    const { product_id,
+        product_title,
+        product_image,
+        price,
+        description,
+        Specification,
+        availability,
+        rating } = selectedGadget;
+    const makeDisable = (id) =>{
+        document.getElementById(id).classList.add('btn-disabled');
+    }
     return (
         <div >
             <Helmet>
@@ -57,8 +67,8 @@ const GadgetDetails = () => {
                         </div>
                     </div>
                     <div className="flex">
-                        <button onClick={() => { AddToCart(product_id)}} className="bg-[#9036da] text-[18px] font-bold text-white btn rounded-full mr-4">Add to Card <IoCartOutline className="text-2xl" /></button>
-                        <a onClick={() => { AddToWishlist(product_id)}} className="btn p-3 rounded-full bg-white"><FaRegHeart className="text-xl" /></a>
+                        <button onClick={() => { AddToCart(product_id) }} className="bg-[#9036da] text-[18px] font-bold text-white btn rounded-full mr-4">Add to Card <IoCartOutline className="text-2xl" /></button>
+                        <a id={product_id} onClick={() => { AddToWishlist(product_id),makeDisable(product_id) }} className="btn p-3 rounded-full bg-white"><FaRegHeart className="text-xl" /></a>
                     </div>
                 </div>
             </div>
