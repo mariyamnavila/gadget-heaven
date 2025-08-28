@@ -21,7 +21,7 @@ const Dashboard = () => {
                     <button onClick={() => { handleClick() }} className={`py-4 px-16 text-xl border border-white bg-[#9538e2] rounded-full ${isDashboardActive ? 'active' : ''}`}>Wishlist</button>
                 </div>
             </div>
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-6xl mx-auto">
                 {
                     isDashboardActive ? <Wishlist></Wishlist> : <Cart />
                 }

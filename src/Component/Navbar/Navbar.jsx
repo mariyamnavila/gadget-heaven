@@ -8,6 +8,7 @@ const Navbar = () => {
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/stats'}>Statistics</NavLink></li>
         <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
+        <li><NavLink to={'/aboutUs'}>About Us</NavLink></li>
     </>
     return (
         <div className='max-w-7xl mx-auto  '>
@@ -42,8 +43,11 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn btn-circle bg-white mr-4 text-xl"><IoCartOutline /></a>
-                    <a className="btn btn-circle bg-white"><FaRegHeart /></a>
+                    <a href='/dashboard' className="btn btn-circle bg-white mr-4 text-xl"><IoCartOutline /></a>
+                    <a
+                        href='/dashboard'
+                        className="btn btn-circle bg-white"><FaRegHeart />
+                    </a>
                 </div>
             </div>
         </div>
