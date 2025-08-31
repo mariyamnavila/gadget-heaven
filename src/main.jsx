@@ -13,11 +13,13 @@ import GadgetDetails from './Component/GadgetDetails/GadgetDetails.jsx';
 import { ToastContainer } from 'react-toastify';
 import Dashboard from './Component/Dashboard/Dashboard.jsx';
 import AboutUs from './Component/AboutUs/AboutUs.jsx';
+import ErrorPage from './Component/Errorpage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
