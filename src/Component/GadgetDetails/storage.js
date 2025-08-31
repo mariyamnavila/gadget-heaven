@@ -9,9 +9,10 @@ const getCartList = () => {
         return []
     }
 }
-const AddToCart = (id) => {
+const AddToCart = (id, price) => {
     const storedList = getCartList();
-    if (storedList.includes(id)) {
+    const objects = storedList.map(object => object.id)
+    if (objects.includes(id)) {
         toast.error('This product is already added to Cart', {
             position: "top-center",
             autoClose: 5000,
@@ -23,28 +24,47 @@ const AddToCart = (id) => {
             theme: "light"
         })
     } else {
-
-        if (storedList) {
-            console.log(storedList);
-        } else {
-            console.log('no storedlist found');
-        }
-        storedList.push(id );
-        const storedListStr = JSON.stringify(storedList);
-        localStorage.setItem('cart', storedListStr)
-        toast.success('This product is added to cart', {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light"
+        let sum = 0;
+        storedList.forEach(cartItem => {
+            sum += cartItem.price;
         });
+        console.log(sum);
+        if (sum > 10000) {
+            toast.error('Cart is Full', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light"
+            })
+        } else {
+            storedList.push({ "id": id, "price": price });
+            const storedListStr = JSON.stringify(storedList);
+            localStorage.setItem('cart', storedListStr)
+            toast.success('This product is added to cart', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light"
+            });
+        }
     }
 }
 
+const RemoveItemFromCart = (id) => {
+    const storedList = getCartList();
+    console.log(storedList);
+    const removed = storedList?.filter(gadget => gadget.id !== id);
+    console.log(removed);
+    localStorage.setItem('cart', removed);
+}
 
 const getWishList = () => {
     const storedWishListStr = localStorage.getItem('wishlist');
@@ -54,6 +74,14 @@ const getWishList = () => {
     } else {
         return []
     }
+}
+
+const RemoveItem = (id) => {
+    const storedWishList = getWishList();
+    console.log(storedWishList);
+    const removed = storedWishList?.filter(gadget => gadget !== id);
+    console.log(removed);
+    localStorage.setItem('wishlist', removed);
 }
 
 const AddToWishlist = (id) => {
@@ -86,4 +114,11 @@ const AddToWishlist = (id) => {
     }
 }
 
-export { AddToCart, AddToWishlist, getCartList, getWishList }
+export {
+    AddToCart,
+    AddToWishlist,
+    getCartList,
+    getWishList,
+    RemoveItem,
+    RemoveItemFromCart
+}

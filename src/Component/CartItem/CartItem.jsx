@@ -1,4 +1,5 @@
 import { RxCrossCircled } from "react-icons/rx";
+import { RemoveItemFromCart } from "../GadgetDetails/storage";
 
 const CartItem = ({ cartItem, removeItem }) => {
     const {
@@ -20,7 +21,10 @@ const CartItem = ({ cartItem, removeItem }) => {
                     <p className="text-2xl font-semibold">Price: ${price}</p>
                 </div>
             </div>
-            <div onClick={() => removeItem(product_id)}>
+            <div onClick={() => {
+                removeItem(product_id)
+                RemoveItemFromCart(product_id)
+            }}>
                 <RxCrossCircled className="text-red-600 text-[36px]" />
             </div>
         </div>

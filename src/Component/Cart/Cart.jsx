@@ -11,7 +11,8 @@ const Cart = () => {
     const navigate = useNavigate()
     useEffect(() => {
         const getCart = getCartList();
-        const actualCart = allGadget.filter(gadget => getCart.includes(gadget['product_id']));
+        const objects = getCart.map(object=> object.id)
+        const actualCart = allGadget.filter(gadget => objects.includes(gadget['product_id']));
         setCart(actualCart)
     }, [allGadget])
     const sortByPrice = () => {
@@ -32,7 +33,7 @@ const Cart = () => {
     cart.forEach(cartItem => {
         sum += cartItem.price;
     });
-    if(sum > 10000){
+    if (sum > 10000) {
         console.log('nononoo');
         cart.filter()
     }
@@ -42,16 +43,16 @@ const Cart = () => {
                 <p className="text-2xl font-bold">Cart</p>
                 <div className="flex items-center space-x-4">
                     <p className="text-2xl font-bold">Total cost: {sum}</p>
-                    <button 
-                    onClick={() => sortByPrice()} 
-                    className="py-2 px-[2px] rounded-full bg-gradient-to-t from-pink-500 to-purple-600"
+                    <button
+                        onClick={() => sortByPrice()}
+                        className="py-2 px-[2px] rounded-full bg-gradient-to-t from-pink-500 to-purple-600"
                     >
-                        <span 
-                        className="w-full p-2 rounded-full pl-4 pr-8 bg-white text-[#9036da]"
+                        <span
+                            className="w-full p-2 rounded-full pl-4 pr-8 bg-white text-[#9036da]"
                         >
                             Sort by Price
-                            <PiSliders className="absolute top-[360px] right-[198px] text-xl text-[#9036da]"/>
-                            </span>
+                            <PiSliders className="absolute top-[360px] right-[198px] text-xl text-[#9036da]" />
+                        </span>
                     </button>
                     <button
                         disabled={sum === 0}

@@ -1,7 +1,10 @@
 import { RxCrossCircled } from "react-icons/rx";
-import { AddToCart } from "../GadgetDetails/storage";
+import { AddToCart,RemoveItem } from "../GadgetDetails/storage";
 
-const WishListItem = ({ wishListItem, removeAfterAddToCart, removeItem }) => {
+const WishListItem = ({ wishListItem, removeAfterAddToCart,
+    removeItem 
+
+}) => {
     const {
         product_id,
         product_image,
@@ -22,7 +25,10 @@ const WishListItem = ({ wishListItem, removeAfterAddToCart, removeItem }) => {
                     <button onClick={() => { AddToCart(product_id), removeAfterAddToCart(product_id) }} className="py-3 px-6 bg-[#9036da] text-white text-xl rounded-full">Add to Cart</button>
                 </div>
             </div>
-            <div onClick={() => removeItem(product_id)}>
+            <div onClick={() =>{
+                removeItem(product_id)
+                RemoveItem(product_id)
+            }}>
                 <RxCrossCircled className="text-red-600 text-[36px]" />
             </div>
         </div>

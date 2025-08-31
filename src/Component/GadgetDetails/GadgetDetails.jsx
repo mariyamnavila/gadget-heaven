@@ -68,7 +68,7 @@ const GadgetDetails = () => {
                         </div>
                     </div>
                     <div className="flex">
-                        <button onClick={() => { AddToCart(product_id) }} className="bg-[#9036da] text-[18px] font-bold text-white btn rounded-full mr-4">Add to Card <IoCartOutline className="text-2xl" /></button>
+                        <button onClick={() => { AddToCart(product_id,price) }} className="bg-[#9036da] text-[18px] font-bold text-white btn rounded-full mr-4">Add to Card <IoCartOutline className="text-2xl" /></button>
                         <a id={product_id} onClick={() => { AddToWishlist(product_id), makeDisable(product_id) }} className="btn p-3 rounded-full bg-white"><FaRegHeart className="text-xl" /></a>
                     </div>
                 </div>
