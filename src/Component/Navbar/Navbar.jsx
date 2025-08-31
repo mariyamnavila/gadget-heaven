@@ -11,8 +11,8 @@ const Navbar = () => {
         <li><NavLink to={'/aboutUs'}>About Us</NavLink></li>
     </>
     return (
-        <div className='max-w-7xl mx-auto  '>
-            <div className="navbar mr-4">
+        <div className='max-w-7xl  mx-auto pt-8'>
+            <div className="navbar mr-4 p-5">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

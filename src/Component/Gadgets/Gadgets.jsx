@@ -13,7 +13,7 @@ const Gadgets = () => {
     useEffect(() => {
         setGadgets(allGadget)
         setIsActive('all')
-    }, [])
+    }, [allGadget])
     const filtered = e => {
         if (e === 'all') {
             setGadgets(allGadget)
@@ -45,19 +45,19 @@ const Gadgets = () => {
                 <div className="w-60 bg-white rounded-2xl p-6 mr-6">
                     <button
                         onClick={() => { filtered('all') }}
-                        className={`btn rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'all' ? 'active' : ''}`}
+                        className={`btn border-0 rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'all' ? 'active' : ''}`}
                     >
                         All Product
                     </button>
                     <button
                         onClick={() => { filtered('Laptops') }}
-                        className={`btn rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'Laptops' ? 'active' : ''}`}
+                        className={`btn border-0 rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'Laptops' ? 'active' : ''}`}
                     >
                         Laptops
                     </button>
                     <button
                         onClick={() => { filtered('Smartphones') }}
-                        className={`btn rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'Smartphones' ? 'active' : ''}`}
+                        className={`btn border-0 rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'Smartphones' ? 'active' : ''}`}
                     >
                         Smartphones
                     </button>
@@ -69,19 +69,19 @@ const Gadgets = () => {
                     </button>
                     <button
                         onClick={() => { filtered('Smartwatches') }}
-                        className={`btn rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'Smartwatches' ? 'active' : ''}`}>
+                        className={`btn border-0 rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'Smartwatches' ? 'active' : ''}`}>
                         Smartwatches
                     </button>
                     <button
                         onClick={() => { filtered('Cameras') }}
-                        className={`btn rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'Cameras' ? 'active' : ''
+                        className={`btn border-0 rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'Cameras' ? 'active' : ''
                             }`}
                     >
                         Cameras
                     </button>
                     <button
                         onClick={() => { filtered('Accessories') }}
-                        className={`btn rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'Accessories' ? 'active' : ''} `}
+                        className={`btn border-0 rounded-full w-full mb-4 bg-[#f2f2f3] ${isActive === 'Accessories' ? 'active' : ''} `}
                     >
                         Accessories
                     </button>

@@ -33,10 +33,6 @@ const Cart = () => {
     cart.forEach(cartItem => {
         sum += cartItem.price;
     });
-    if (sum > 10000) {
-        console.log('nononoo');
-        cart.filter()
-    }
     return (
         <div className="mb-52">
             <div className="flex justify-between items-center my-10 btn-disabled">
@@ -45,18 +41,17 @@ const Cart = () => {
                     <p className="text-2xl font-bold">Total cost: {sum}</p>
                     <button
                         onClick={() => sortByPrice()}
-                        className="py-2 px-[2px] rounded-full bg-gradient-to-t from-pink-500 to-purple-600"
+                        className="p-[2px] rounded-full bg-gradient-to-t from-pink-500 to-purple-600"
                     >
                         <span
-                            className="w-full p-2 rounded-full pl-4 pr-8 bg-white text-[#9036da]"
+                            className="w-full flex items-center p-2 gap-2 rounded-full  bg-white text-[#9036da]"
                         >
                             Sort by Price
-                            <PiSliders className="absolute top-[360px] right-[198px] text-xl text-[#9036da]" />
+                            <PiSliders className=" text-xl text-[#9036da]" />
                         </span>
                     </button>
                     <button
                         disabled={sum === 0}
-                        // id="purchase"'disabled'
                         className="btn py-2 px-6 rounded-full bg-gradient-to-t from-pink-500 to-purple-600 text-white"
                         onClick={() => {
                             document.getElementById('my_modal_5').showModal()

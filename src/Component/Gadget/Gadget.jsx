@@ -4,7 +4,7 @@ const Gadget = ({ gadget }) => {
     const { product_id,product_image, price, product_title } = gadget
     return (
         <div className="p-5 rounded-2xl bg-white space-y-2">
-            <img className="rounded-xl w-[280px] h-[180px] object-cover" src={product_image} alt="" />
+            <img className="rounded-xl w-full h-[180px] object-cover mb-4" src={product_image} alt="" />
             <p className="text-2xl font-semibold">{product_title}</p>
             <p className="text-[#6b6b6f] text-xl">Price: {price}$</p>
             <Link to={`/gadget/${product_id}`}>

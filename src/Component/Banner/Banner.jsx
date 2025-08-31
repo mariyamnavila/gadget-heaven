@@ -10,12 +10,12 @@ const Banner = () => {
         <li><NavLink to={'/aboutUs'}>About Us</NavLink></li>
     </>
     return (
-        <div>
-            <div className="relative -top-24  border border-[rgba(149,56,226,0.48)] rounded-3xl mt-8">
+        <div className='pt-6'>
+            <div className="relative -top-28 rounded-3xl  ">
 
-                <div className="bg-[#9538e2] mx-2 my-2 border rounded-3xl">
+                <div className="bg-[#9538e2] mx-2 my-2 rounded-3xl ">
                     <div className="max-w-7xl text-center text-white mx-auto space-y-6 pb-52">
-                        <div className="navbar p-0 min-h-0">
+                        <div className="navbar  min-h-0 p-3">
                             <div className="navbar-start">
                                 <div className="dropdown">
                                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

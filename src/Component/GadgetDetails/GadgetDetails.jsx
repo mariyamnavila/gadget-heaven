@@ -34,14 +34,14 @@ const GadgetDetails = () => {
             </div>
             <div className="max-w-7xl mx-auto bg-white rounded-3xl p-8 flex relative -top-48">
                 <div>
-                    <img className="w-[425px] h-[505px] object-fill rounded-2xl mr-8" src={product_image} alt="" />
+                    <img className="w-[425px] h-[505px] object-cover rounded-2xl mr-8" src={product_image} alt="" />
                 </div>
                 <div className="space-y-4">
                     <h4 className="font-semibold text-3xl">{product_title}</h4>
                     <p className="font-semibold text-xl">Price:${price}</p>
-                    <div className="bg-[#309C081A] text-[#309C08] rounded-full border border-[#309C08] px-4 py-2 w-[87px] h-[32px]">
+                    <div className="bg-[#309C081A] text-[#309C08] rounded-full border border-[#309C08] px-4 py-2 w-[90px] h-[36px]">
                         <p
-                            className="text-[14px] font-medium w-[59px] h-[18px] "
+                            className="text-[14px] font-medium w-[60px] h-[30px] "
                         >
                             {availability === true ? 'In Stock' : 'Out of stock'}
                         </p>
@@ -63,12 +63,18 @@ const GadgetDetails = () => {
                             emptySymbol={<MdOutlineStarBorder className="text-[#f9c004] text-3xl" />}
                             fullSymbol={<MdOutlineStarPurple500 className="text-[#f9c004] text-3xl" />}
                         />
-                        <div className="bg-slate-300 py-2 px-4 rounded-full">
+                        <div className="bg-[#f3f3f3] py-2 px-4 rounded-full">
                             <p>{rating}</p>
                         </div>
                     </div>
                     <div className="flex">
-                        <button onClick={() => { AddToCart(product_id,price) }} className="bg-[#9036da] text-[18px] font-bold text-white btn rounded-full mr-4">Add to Card <IoCartOutline className="text-2xl" /></button>
+                        <button
+                            onClick={() => { AddToCart(product_id, price) }}
+                            className="bg-[#9036da] text-[18px] font-semibold text-white btn p-6 rounded-full mr-4"
+                        >
+                            Add to Card
+                            <IoCartOutline className="text-2xl" />
+                        </button>
                         <a id={product_id} onClick={() => { AddToWishlist(product_id), makeDisable(product_id) }} className="btn p-3 rounded-full bg-white"><FaRegHeart className="text-xl" /></a>
                     </div>
                 </div>
