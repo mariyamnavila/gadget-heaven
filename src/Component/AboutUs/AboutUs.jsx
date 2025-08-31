@@ -19,7 +19,7 @@ const AboutUs = () => {
                 </div>
             </div>
             <div className="max-w-5xl mx-auto my-16 ">
-                 <h4 className="font-bold text-3xl text-center mb-7">Frequently Asked Questions (FAQ)</h4>
+                <h4 className="font-bold text-3xl text-center mb-7">Frequently Asked Questions (FAQ)</h4>
                 <div className="collapse collapse-arrow bg-white">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">What type of products does Gadget Heaven offer?</div>

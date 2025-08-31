@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import {
     ComposedChart,
-    Line,
     Area,
     Bar,
     XAxis,
@@ -10,13 +9,11 @@ import {
     CartesianGrid,
     Tooltip,
     Legend,
-    Scatter,
     ResponsiveContainer,
 } from 'recharts';
 
 const Stats = () => {
     const allGadgets = useLoaderData();
-    console.log(allGadgets);
     return (
         <div>
             <Helmet>
@@ -31,7 +28,7 @@ const Stats = () => {
                 <div style={{ width: '100%', height: '500px' }}>
                     <ResponsiveContainer className='w-full h-full' width="100%" height="100%">
                         <ComposedChart
-                        className="w-full "
+                            className="w-full "
                             width={1000}
                             height={800}
                             data={allGadgets}
@@ -49,8 +46,6 @@ const Stats = () => {
                             <Legend />
                             <Area type="monotone" dataKey={'price'} fill="#efe1fb" stroke="#efe1fb" />
                             <Bar dataKey={'price'} barSize={20} fill="#9538e2" />
-                            {/* <Line type="monotone" dataKey="uv" stroke="#ff7300" /> */}
-                            {/* <Scatter dataKey="cnt" fill="red" /> */}
                         </ComposedChart>
                     </ResponsiveContainer>
                 </div>

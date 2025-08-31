@@ -3,20 +3,17 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { getCartList } from "../GadgetDetails/storage";
 import CartItem from "../CartItem/CartItem";
 import success from '../../assets/Group.png';
+import { PiSliders } from "react-icons/pi";
 
 const Cart = () => {
     const allGadget = useLoaderData();
     const [cart, setCart] = useState([]);
     const navigate = useNavigate()
-    let sum = 0;
-    cart.forEach(cartItem => {
-        sum += cartItem.price;
-    });
     useEffect(() => {
         const getCart = getCartList();
         const actualCart = allGadget.filter(gadget => getCart.includes(gadget['product_id']));
         setCart(actualCart)
-    }, [])
+    }, [allGadget])
     const sortByPrice = () => {
         const sorted = [...cart].sort((a, b) => b.price - a.price);
         setCart(sorted);
@@ -27,17 +24,37 @@ const Cart = () => {
         localStorage.removeItem('cart');
         navigate('/');
     }
+    const removeItem = (id) => {
+        const removed = cart.filter(gadget => gadget.product_id !== id)
+        setCart(removed)
+    }
+    let sum = 0;
+    cart.forEach(cartItem => {
+        sum += cartItem.price;
+    });
+    if(sum > 10000){
+        console.log('nononoo');
+        cart.filter()
+    }
     return (
         <div className="mb-52">
             <div className="flex justify-between items-center my-10 btn-disabled">
                 <p className="text-2xl font-bold">Cart</p>
                 <div className="flex items-center space-x-4">
                     <p className="text-2xl font-bold">Total cost: {sum}</p>
-                    <button onClick={() => sortByPrice()} className="py-2 px-[2px] rounded-full bg-gradient-to-t from-pink-500 to-purple-600">
-                        <span className="w-full p-2 rounded-full px-4 bg-white text-[#9036da]">Sort by Price</span>
+                    <button 
+                    onClick={() => sortByPrice()} 
+                    className="py-2 px-[2px] rounded-full bg-gradient-to-t from-pink-500 to-purple-600"
+                    >
+                        <span 
+                        className="w-full p-2 rounded-full pl-4 pr-8 bg-white text-[#9036da]"
+                        >
+                            Sort by Price
+                            <PiSliders className="absolute top-[360px] right-[198px] text-xl text-[#9036da]"/>
+                            </span>
                     </button>
                     <button
-                        disabled={sum=== 0 }
+                        disabled={sum === 0}
                         // id="purchase"'disabled'
                         className="btn py-2 px-6 rounded-full bg-gradient-to-t from-pink-500 to-purple-600 text-white"
                         onClick={() => {
@@ -63,7 +80,11 @@ const Cart = () => {
             </div>
             <div>
                 {
-                    cart.map((cartItem, idx) => <CartItem key={idx} cartItem={cartItem}></CartItem>)
+                    cart.map((cartItem, idx) => <CartItem
+                        key={idx}
+                        cartItem={cartItem}
+                        removeItem={removeItem}
+                    ></CartItem>)
                 }
             </div>
         </div>

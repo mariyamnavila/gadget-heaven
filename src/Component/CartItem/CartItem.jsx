@@ -1,7 +1,13 @@
 import { RxCrossCircled } from "react-icons/rx";
 
-const CartItem = ({ cartItem }) => {
-    const { product_image, price, product_title, description } = cartItem
+const CartItem = ({ cartItem, removeItem }) => {
+    const {
+        product_id,
+        product_image,
+        price,
+        product_title,
+        description
+    } = cartItem
     return (
         <div className="bg-white p-8 rounded-2xl flex justify-between items-center mb-6">
             <div className="flex items-center">
@@ -14,7 +20,7 @@ const CartItem = ({ cartItem }) => {
                     <p className="text-2xl font-semibold">Price: ${price}</p>
                 </div>
             </div>
-            <div>
+            <div onClick={() => removeItem(product_id)}>
                 <RxCrossCircled className="text-red-600 text-[36px]" />
             </div>
         </div>

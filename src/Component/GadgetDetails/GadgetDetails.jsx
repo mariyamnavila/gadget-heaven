@@ -18,8 +18,9 @@ const GadgetDetails = () => {
         description,
         Specification,
         availability,
-        rating } = selectedGadget;
-    const makeDisable = (id) =>{
+        rating
+    } = selectedGadget;
+    const makeDisable = (id) => {
         document.getElementById(id).classList.add('btn-disabled');
     }
     return (
@@ -38,9 +39,9 @@ const GadgetDetails = () => {
                 <div className="space-y-4">
                     <h4 className="font-semibold text-3xl">{product_title}</h4>
                     <p className="font-semibold text-xl">Price:${price}</p>
-                    <div className="bg-[#309C081A] text-[#309C08] rounded-full border border-[#309C08] px-4 py-2 w-[87px]">
+                    <div className="bg-[#309C081A] text-[#309C08] rounded-full border border-[#309C08] px-4 py-2 w-[87px] h-[32px]">
                         <p
-                            className="text-[14px] font-medium "
+                            className="text-[14px] font-medium w-[59px] h-[18px] "
                         >
                             {availability === true ? 'In Stock' : 'Out of stock'}
                         </p>
@@ -68,7 +69,7 @@ const GadgetDetails = () => {
                     </div>
                     <div className="flex">
                         <button onClick={() => { AddToCart(product_id) }} className="bg-[#9036da] text-[18px] font-bold text-white btn rounded-full mr-4">Add to Card <IoCartOutline className="text-2xl" /></button>
-                        <a id={product_id} onClick={() => { AddToWishlist(product_id),makeDisable(product_id) }} className="btn p-3 rounded-full bg-white"><FaRegHeart className="text-xl" /></a>
+                        <a id={product_id} onClick={() => { AddToWishlist(product_id), makeDisable(product_id) }} className="btn p-3 rounded-full bg-white"><FaRegHeart className="text-xl" /></a>
                     </div>
                 </div>
             </div>

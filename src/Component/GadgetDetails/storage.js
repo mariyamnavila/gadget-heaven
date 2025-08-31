@@ -21,24 +21,27 @@ const AddToCart = (id) => {
             draggable: true,
             progress: undefined,
             theme: "light"
-        }
-        )
+        })
     } else {
-        storedList.push(id);
+
+        if (storedList) {
+            console.log(storedList);
+        } else {
+            console.log('no storedlist found');
+        }
+        storedList.push(id );
         const storedListStr = JSON.stringify(storedList);
         localStorage.setItem('cart', storedListStr)
-        toast.success('This product is added to cart',
-            {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light"
-            }
-        );
+        toast.success('This product is added to cart', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light"
+        });
     }
 }
 
@@ -65,24 +68,21 @@ const AddToWishlist = (id) => {
             draggable: true,
             progress: undefined,
             theme: "light"
-        }
-        )
+        })
     } else {
         storedWishList.push(id);
         const storedWishListStr = JSON.stringify(storedWishList);
         localStorage.setItem('wishlist', storedWishListStr);
-        toast.success('This product is added to Wishlist',
-            {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light"
-            }
-        );
+        toast.success('This product is added to Wishlist', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light"
+        });
     }
 }
 
